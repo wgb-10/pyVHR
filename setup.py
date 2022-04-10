@@ -5,10 +5,10 @@ from shutil import copyfile
 requirementPath = 'requirements.txt'
 reqs = []
 if os.path.isfile(requirementPath):
-    with open(requirementPath) as f:
+    with open(requirementPath, encoding="utf-8") as f:
         reqs = f.read().splitlines()
 
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
